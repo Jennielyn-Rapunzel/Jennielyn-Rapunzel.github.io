@@ -1,0 +1,272 @@
+@font-face {
+    src: url(fonts/Better\ Together\ Script.ttf);
+    font-family: together;
+
+}
+
+@font-face{
+    src: url(fonts/Please\ write\ me\ a\ song.ttf);
+    font-family: write;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body{
+    overflow-x:hidden;
+}
+
+p{
+    font-family:write;
+}
+
+h1{
+    color: #de8971;
+    line-height: 100px;
+    margin-top: -200px;
+    position: absolute;
+    margin-left: 100px;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    font-family: together;
+    font-size: 500%;
+
+}
+
+@keyframes animate{
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+
+
+ .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f8f5f1;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #424642;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    transition: 0.3s;
+    
+}
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background: #9fe6a0;
+    color: #4aa96c;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background: rgba(0, 0, 0, 0.);
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+ #test {
+    transition: margin-left .5s;
+    padding: 16px;  
+    background-color: #e8e7e3;
+ }
+  
+
+
+.sidebar .profile{
+    width: 190px;
+    border-radius: 100px;
+    height: 200px;
+    align-items: center;
+    margin-left: 30px;
+}
+
+h4{
+    color: #f8f5f1;
+    font-family: write;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+#btn{
+    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #ffe5e2;
+    font-family: write;
+}
+
+.active {
+    background-color: green;
+    color: white;
+  }
+  
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+  
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  
+  .self {
+  float: left;
+  width: 10%;
+  }
+/* -------------------------------------------------------------*/
+  /* Changed / added */
+
+.bg img{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index:-5;
+        background-color: #e8e7e3;
+   }
+
+.content {
+    margin: 45px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.content li{
+    list-style-type:none;
+    padding: 5px;
+    text-align:justify;
+}
+
+.content #li-para{
+    width:700px;
+    padding:15px;
+    font-size: 1.9rem;
+}
+.content li img{
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+    border: 2px solid black;
+}
+
+
+/* starts heeeeeereeeeeeee */
+.act-contents{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #e8e7e3;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    transform-style:preserve-3d;
+
+}
+
+section .card{
+    position:relative;
+    width: 466px;
+    height: 320px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    transform-style:preserve-3d;
+    perspective: 1000px;
+}
+
+section .card .box{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform-style:preserve-3d;
+    transition: 1s ease;
+}
+
+/* ito na yung sa hover kapag tinutok mouse */
+section .card:hover .box{
+    transform: rotateY(360deg);
+}
+
+section .card .box .imgBOX{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* wag galawin size nang image to */
+section .card .box .imgBOX img{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+section .card .box .contentBox{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:#e4bad4; /* CHANGE BACKGROUND COLOR YUNG BLACK TO AH */
+    backface-visibility:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform-style:preserve-3d;
+    transform: rotateY(180deg);
+}
+section .card .box .contentBox div{ 
+    display:none;
+}
+
+
